@@ -46,6 +46,7 @@ a {
   border: 2px solid #e7e7e7;
   border-radius: 4px;
   padding: .5rem;
+  background-color: #8c271e;
+  color: #e4b363;
 }
-
 </style>

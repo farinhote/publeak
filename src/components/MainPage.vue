@@ -56,9 +56,6 @@ li {
   display: inline-block;
   margin: 20px 10px;
 }
-a {
-  color: #42b983;
-}
   .cards {
     display: grid;
     grid-auto-rows: auto;

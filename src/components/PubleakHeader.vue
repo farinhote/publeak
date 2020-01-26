@@ -1,24 +1,22 @@
 <template>
   <div id="nav">
     <div>
-      <img
-        id="logo"
-        alt="PubLeak logo"
-        src="../assets/logo.svg"
-      >
       <router-link to="/">
         Home
-      </router-link> |
+      </router-link>|
       <router-link to="/about">
         About
       </router-link>
-      <router-view />
-      <div>
-        <h1> {{ $t("publeakHeader.title") }} </h1>
-        <p>
-          {{ $t("publeakHeader.subtitle") }}
-        </p>
-      </div>
+    </div>
+    <img
+      id="logo"
+      alt="PubLeak logo"
+      src="../assets/logo.svg"
+    >
+
+    <div>
+      <h1>{{ $t("publeakHeader.title") }}</h1>
+      <p>{{ $t("publeakHeader.subtitle") }}</p>
     </div>
   </div>
 </template>
@@ -30,7 +28,6 @@ export default {
 </script>
 
 <style scoped>
-
 #nav {
   padding: 30px;
 }
@@ -42,5 +39,23 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+@media only screen and (max-width: 767px) {
+  #logo {
+    width: 25vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #logo {
+    position: absolute;
+    top: 0px;
+    left: 25vw;
+    border-top: 2px solid red;
+    width: 10vw;
+  }
 }
 </style>
