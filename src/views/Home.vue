@@ -11,7 +11,6 @@
 
 <script>
 import HelloWorld from '../components/HelloWorld.vue';
-import '../assets/global.css';
 
 export default {
   name: 'Home',
