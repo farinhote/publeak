@@ -80,7 +80,7 @@ a {
 }
 
 .card-text{
-  text-align: left;
+  text-align: justify;
   color: #4d4d4d;
 }
 
