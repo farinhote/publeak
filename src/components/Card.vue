@@ -1,33 +1,37 @@
 <template>
-  <div class="card-container">
-    <div class="card-header">
-      <div
-        :style="{ backgroundImage: `url('${post.img}')` }"
-        class="card-cover"
-      />
-    </div>
-
-    <div class="card-body">
-      <div class="card-title">
-        <h1>
-          <router-link :to="`/article/${post.id}`">
-            {{ post.title }}
-          </router-link>
-        </h1>
+  <router-link
+    class="card"
+    :to="`/article/${post.id}`"
+  >
+    <div class="card-container">
+      <div class="card-header">
+        <div
+          :style="{ backgroundImage: `url('${post.img}')` }"
+          class="card-cover"
+        />
       </div>
-      <div class="card-summary">
-        <p> {{ post.text }} </p>
+      <div class="card-body">
+        <div class="card-title">
+          <h1>
+            <a>
+              {{ post.title }}
+            </a>
+          </h1>
+        </div>
+        <div class="card-summary">
+          <p> {{ post.text }} </p>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <ul>
+          <li class="published-date">
+            {{ post.publishedDate }}
+          </li>
+        </ul>
       </div>
     </div>
-
-    <div class="card-footer">
-      <ul>
-        <li class="published-date">
-          {{ post.publishedDate }}
-        </li>
-      </ul>
-    </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -46,8 +50,6 @@ export default {
     if (this.$props.post.text.length >= 360) {
       this.$props.post.text = `${this.$props.post.text.substring(0, 360)}...`;
     }
-    // eslint-disable-next-line no-debugger
-    debugger;
   },
 };
 </script>
@@ -57,8 +59,13 @@ li {
   display: inline-block;
   margin: 20px 10px;
 }
+
 a {
   color: #42b983;
+}
+
+.card{
+  text-decoration: none !important;
 }
 
 .card-container {
@@ -74,6 +81,7 @@ a {
   text-decoration: none;
   transition: 0.25s ease;
 }
+
 .card-container a:hover {
   border-color: #ff4d4d;
   color: #ff4d4d;

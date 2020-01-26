@@ -1,15 +1,12 @@
 @import "global-mobile.css";
 
-a {
-  color: #e4b363;
-}
 body {
   background: #e5ded8;
 }
 @media only screen and (min-width: 768px) {
   body {
-    font-size: calc(16px + 0.5vw);
-    line-height: calc(1.1em + 0.5vw);
+    font-size: calc(16px + 0.1vw);
+    line-height: calc(1.1em + 0.2vw);
     width: 70vw;
     margin: auto;
   }
