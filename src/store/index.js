@@ -1,20 +1,25 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import client from '../api/mock';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    tasks: [
-      { title: 234, subtitle: 'Greatest news in europe' },
-      { title: 266, subtitle: 'I love burly man' },
-      { title: 273, subtitle: 'I love burly cats' },
-      { title: 225, subtitle: 'I love myself' },
-    ],
+    posts: [],
   },
   mutations: {
+    setPosts(state, posts) {
+      // eslint-disable-next-line no-param-reassign
+      state.posts = posts;
+    },
   },
   actions: {
+    fetchPosts({ commit }) {
+      return client
+        .fetchPosts()
+        .then((posts) => commit('setPosts', posts));
+    },
   },
   modules: {
   },

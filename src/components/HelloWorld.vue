@@ -7,8 +7,8 @@
     <h3>List of dumb Things</h3>
     <ul>
       <li
-        v-for="task in tasks"
-        :key="task.title"
+        v-for="post in posts"
+        :key="post.title"
         class="article"
       >
         <div>
@@ -17,9 +17,9 @@
             target="_blank"
             rel="noopener"
           >
-            {{ task.title }}
+            {{ post.title }}
           </a>
-          <p>{{ task.subtitle }}</p>
+          <p>{{ post.subtitle }}</p>
         </div>
       </li>
     </ul>
@@ -73,10 +73,28 @@ export default {
       default: 'PubLeak',
     },
   },
+
+  data() {
+    return {
+      loading: false,
+    };
+  },
+
   computed: {
-    tasks() {
-      return this.$store.state.tasks;
+    posts() {
+      return this.$store.state.posts;
     },
+  },
+
+  created() {
+    this.loading = true;
+    this.$store.dispatch('fetchPosts')
+      .then((posts) => {
+        this.loading = false;
+        // eslint-disable-next-line no-debugger
+        debugger;
+        this.posts = posts;
+      });
   },
 };
 </script>
