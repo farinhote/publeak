@@ -1,36 +1,29 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ $t("thing") }}</h1>
     <p>
       For the latest public leaks
     </p>
     <h3>List of dumb Things</h3>
     <ul>
-      <li
+      <card
         v-for="post in posts"
         :key="post.id"
         class="article"
-      >
-        <div>
-          <img
-            src=""
-            alt=""
-          >
-        </div>
-        <div>
-          <router-link :to="`/article/${post.id}`">
-            {{ post.title }}
-          </router-link>
-          <p>{{ post.subtitle }}</p>
-        </div>
-      </li>
+        :post="post"
+      />
     </ul>
   </div>
 </template>
 
 <script>
+import Card from './Card.vue';
+
 export default {
   name: 'MainPage',
+  components: {
+    Card,
+  },
   props: {
     msg: {
       type: String,

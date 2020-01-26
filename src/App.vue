@@ -5,7 +5,7 @@
         Home
       </router-link> |
       <router-link to="/about">
-        Aboot
+        About
       </router-link>
     </div>
     <router-view />
