@@ -1,25 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="PubLeak" 
-      v-bind:tasks="[
-        { title: 234, subtitle: 'Greatest news in europe' },
-        { title: 266, subtitle: 'I love burly man' },
-        { title: 273, subtitle: 'I love burly cats' },
-        { title: 225, subtitle: 'I love myself' }
-      ]"
-    />
+    <img
+      id="logo"
+      alt="Vue logo"
+      src="../assets/logo.svg"
+    >
+    <HelloWorld msg="PubLeak" />
   </div>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld.vue'
-import "../assets/global.css"
+import HelloWorld from '../components/HelloWorld.vue';
+import '../assets/global.css';
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+  },
+};
 </script>
