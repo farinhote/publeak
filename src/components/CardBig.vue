@@ -3,23 +3,18 @@
     v-if="post.id"
     class="card-container"
   >
-    <div class="card-header">
-      <div
-        :style="{ backgroundImage: `url('${post.img}')` }"
-        class="card-cover"
-      />
-    </div>
+    <img
+      :src="post.img"
+      class="card-cover"
+    >
     <div class="card-body">
-      <div class="card-title">
-        <h1>
-          {{ post.title }}
-        </h1>
-      </div>
-      <div class="card-summary">
-        <p> {{ post.text }} </p>
-      </div>
+      <h1 class="card-title">
+        {{ post.title }}
+      </h1>
+      <p class="card-summary">
+        {{ post.text }}
+      </p>
     </div>
-
     <div class="card-footer">
       <ul>
         <li class="published-date">
@@ -45,10 +40,6 @@ export default {
 </script>
 
 <style scoped>
-li {
-  display: inline-block;
-  margin: 20px 10px;
-}
 a {
   color: #42b983;
 }
@@ -72,10 +63,9 @@ a {
 }
 
 .card-cover {
-  background-size: cover;
   border-radius: 5px 5px 0 0;
-  height:8rem;
   box-shadow: inset rgba(0, 0, 0, 0.2) 0 64px 64px 16px;
+  width: 100%;
 }
 
 .card-body {
@@ -101,13 +91,12 @@ a {
 }
 
 .card-footer ul {
-  list-style: none;
   display: flex;
-  flex: row wrap;
-  padding-left: 0;
 }
 
 .card-footer li {
+  display: inline-block;
+  margin: 20px 10px;
   color: #999999;
   font-size: 0.75rem;
   height: 1.5rem;
