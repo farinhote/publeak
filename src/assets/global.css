@@ -1,17 +1,17 @@
 @import "global-handheld.css";
 
-.article div{
-  height: 5em;
-  width: 50em;
-  background-color: hsl(045, 60%, 35%);
-  border-radius: 15px;
-}
-
-body {
-  font-size: calc(16px + 0.5vw);
-  line-height: calc(1.1em + 0.5vw);
-}
-
-#logo {
-  width: 10vw;
+@media only screen and (min-width: 769px) {
+  body {
+    font-size: calc(16px + 0.5vw);
+    line-height: calc(1.1em + 0.5vw);
+    width: 70vw;
+    margin: auto;
+  }
+  #logo {
+    position: fixed; 
+    top: 0px;
+    left: 25vw;
+    border-top: 2px solid red;
+    width: 10vw;
+  }
 }

@@ -4,10 +4,16 @@
   }
   body {
     background-color: hsl(345, 60%, 35%);
+    font-size: calc(16px + 1vw);
+    line-height: calc(1.1em + 1vw);
+
   }
   .article div{
-    width: 75vw !important; 
+    width: 75vw; 
     background-color: hsl(045, 60%, 35%);
     border-radius: 15px;
+  }
+  #logo {
+    width: 35vw;
   }
 }
