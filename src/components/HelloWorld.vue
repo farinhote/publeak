@@ -11,14 +11,10 @@
         :key="post.title"
         class="article"
       >
-        <div>
-          <a
-            href="https://router.vuejs.org"
-            target="_blank"
-            rel="noopener"
-          >
-            {{ post.title }}
-          </a>
+        <div
+          @click="openArticle(post)"
+        >
+          {{ post.title }}
           <p>{{ post.subtitle }}</p>
         </div>
       </li>
@@ -74,12 +70,6 @@ export default {
     },
   },
 
-  data() {
-    return {
-      loading: false,
-    };
-  },
-
   computed: {
     posts() {
       return this.$store.state.posts;
@@ -87,14 +77,14 @@ export default {
   },
 
   created() {
-    this.loading = true;
-    this.$store.dispatch('fetchPosts')
-      .then((posts) => {
-        this.loading = false;
-        // eslint-disable-next-line no-debugger
-        debugger;
-        this.posts = posts;
-      });
+    this.$store.dispatch('fetchPosts');
+  },
+
+  methods: {
+    openArticle(post) {
+      // eslint-disable-next-line no-alert
+      alert(post.id);
+    },
   },
 };
 </script>

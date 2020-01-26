@@ -1,21 +1,21 @@
 [
   {
-    "id": 1,
+    "id": "cool-post",
     "title": "Cool Post",
     "subtitle": "Sub example"
   },
   {
-    "id": 2,
+    "id": "better-post",
     "title": "Better Post",
     "subtitle": "Sub example"
   },
   {
-    "id": 3,
+    "id": "mega-post",
     "title": "Mega Post",
     "subtitle": "Sub example"
   },
   {
-    "id": 3,
+    "id": "bad-post",
     "title": "Bad Post",
     "subtitle": "Sub example"
   }
