@@ -11,7 +11,7 @@
       <h1 class="card-title">
         {{ post.title }}
       </h1>
-      <p class="card-summary">
+      <p class="card-text">
         {{ post.text }}
       </p>
     </div>
@@ -79,8 +79,15 @@ a {
   font-weight: 100;
 }
 
-.card-summary p {
+.card-text{
+  text-align: left;
   color: #4d4d4d;
+}
+
+/* Maintain same color as logo */
+.card-text::first-letter {
+  font-size: 200%;
+  color: #9B541E;
 }
 
 .card-footer {

@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="header">
     <div>
       <router-link to="/">
         <span>{{ $t("publeakHeader.home") }}</span>
@@ -14,7 +14,7 @@
         alt="PubLeak logo"
         src="../assets/logo.svg"
       >
-    </router-link>|
+    </router-link>
 
     <div>
       <h1>{{ $t("publeakHeader.title") }}</h1>
@@ -30,16 +30,16 @@ export default {
 </script>
 
 <style scoped>
-#nav {
+#header {
   padding: 30px;
 }
 
-#nav a {
+#header a {
   font-weight: bold;
   color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
+#header a.router-link-exact-active {
   color: #42b983;
 }
 
