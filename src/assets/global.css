@@ -1,6 +1,6 @@
 @import "global-handheld.css";
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   body {
     font-size: calc(16px + 0.5vw);
     line-height: calc(1.1em + 0.5vw);
