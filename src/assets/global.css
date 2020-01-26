@@ -2,6 +2,7 @@
 
 body {
   background: linear-gradient(45deg, #6c464f, white);
+  background-attachment: fixed;
 }
 @media only screen and (min-width: 768px) {
   body {
