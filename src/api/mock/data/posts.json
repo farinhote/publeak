@@ -2,21 +2,25 @@
   {
     "id": "cool-post",
     "title": "Cool Post",
-    "subtitle": "Sub example"
+    "subtitle": "Sub example",
+    "publishedDate": "39 minutes ago"
   },
   {
     "id": "better-post",
     "title": "Better Post",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aspernatur quibusdam mollitia autem possimus pariatur, excepturi repudiandae illo veritatis minus laborum quisquam cum itaque, nobis vel non voluptas maxime deserunt velit, molestias quia dignissimos? Earum reiciendis dolorem accusantium veritatis esse corporis odio dicta sint? Aperiam, voluptatem iusto quas tempore accusamus quia nihil praesentium adipisci consequuntur omnis impedit numquam ad eligendi esse eaque minima tenetur nisi atque voluptates expedita nemo facere? Accusantium qui distinctio sunt ab necessitatibus deleniti deserunt est earum."
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aspernatur quibusdam mollitia autem possimus pariatur, excepturi repudiandae illo veritatis minus laborum quisquam cum itaque, nobis vel non voluptas maxime deserunt velit, molestias quia dignissimos? Earum reiciendis dolorem accusantium veritatis esse corporis odio dicta sint? Aperiam, voluptatem iusto quas tempore accusamus quia nihil praesentium adipisci consequuntur omnis impedit numquam ad eligendi esse eaque minima tenetur nisi atque voluptates expedita nemo facere? Accusantium qui distinctio sunt ab necessitatibus deleniti deserunt est earum.",
+    "publishedDate": "2 hours ago"
   },
   {
     "id": "mega-post",
     "title": "Mega Post",
-    "subtitle": "Sub example"
+    "subtitle": "Sub example",
+    "publishedDate": "18 hours ago"
   },
   {
     "id": "bad-post",
     "title": "Bad Post",
-    "subtitle": "Sub example"
+    "subtitle": "Sub example",
+    "publishedDate": "1 day ago"
   }
 ]

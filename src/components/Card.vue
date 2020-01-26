@@ -20,7 +20,7 @@
     <div class="card-footer">
       <ul>
         <li class="published-date">
-          2 days ago
+          {{ post.publishedDate }}
         </li>
       </ul>
     </div>
@@ -53,14 +53,6 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.card-text{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  width: 20vw;
-  height: 100px;
 }
 
 .card-container {
