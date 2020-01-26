@@ -5,7 +5,7 @@
       alt="Vue logo"
       src="../assets/logo.svg"
     >
-    <MainPage msg="PubLeak" />
+    <main-page />
   </div>
 </template>
 

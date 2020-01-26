@@ -1,9 +1,7 @@
 <template>
-  <div class="header">
-    <h1> {{ $t("mainPage.title") }} </h1>
-    <p>
-      {{ $t("mainPage.subtitle") }}
-    </p>
+  <div class="news">
+    <publeak-header />
+
     <h3> {{ $t("mainPage.listTitle") }} </h3>
     <ul class="cards">
       <card
@@ -18,11 +16,13 @@
 
 <script>
 import Card from './Card.vue';
+import PubleakHeader from './PubleakHeader.vue';
 
 export default {
   name: 'MainPage',
   components: {
     Card,
+    PubleakHeader,
   },
   props: {
     msg: {
@@ -59,10 +59,20 @@ li {
 a {
   color: #42b983;
 }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
-  grid-gap: 1rem;
+  .cards {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+  }
+@media only screen and (max-width: 767px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
+@media only screen and (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 </style>

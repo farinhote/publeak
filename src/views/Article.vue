@@ -1,21 +1,16 @@
 <template>
   <div class="home">
-    <img
-      id="logo"
-      alt="PubLeak logo"
-      src="../assets/logo.svg"
-    >
-    <MainPage msg="Banana" />
+    <publeak-header />
   </div>
 </template>
 
 <script>
-import MainPage from '../components/MainPage.vue';
+import PubleakHeader from '../components/PubleakHeader.vue';
 
 export default {
-  name: 'Home',
+  name: 'Article',
   components: {
-    MainPage,
+    PubleakHeader,
   },
 };
 </script>
