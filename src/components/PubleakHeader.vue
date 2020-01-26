@@ -2,10 +2,10 @@
   <div id="nav">
     <div>
       <router-link to="/">
-        Home
+        <span>Home</span>
       </router-link>|
       <router-link to="/about">
-        About
+        <span>About</span>
       </router-link>
     </div>
     <img
@@ -54,7 +54,7 @@ export default {
     position: absolute;
     top: 0px;
     left: 25vw;
-    border-top: 2px solid red;
+    border-top: 2px solid #9B541E;
     width: 10vw;
   }
 }

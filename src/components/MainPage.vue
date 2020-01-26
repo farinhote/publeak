@@ -56,11 +56,11 @@ li {
   display: inline-block;
   margin: 20px 10px;
 }
-  .cards {
-    display: grid;
-    grid-auto-rows: auto;
-    grid-gap: 1rem;
-  }
+.cards {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+}
 @media only screen and (max-width: 767px) {
   .cards {
     grid-template-columns: repeat(1, 1fr);
@@ -68,7 +68,7 @@ li {
 }
 @media only screen and (min-width: 768px) {
   .cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
