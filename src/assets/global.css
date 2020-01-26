@@ -1,7 +1,7 @@
 @import "global-mobile.css";
 
 body {
-  background: #e5ded8;
+  background: linear-gradient(45deg, #6c464f, white);
 }
 @media only screen and (min-width: 768px) {
   body {

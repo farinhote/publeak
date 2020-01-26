@@ -4,12 +4,10 @@
     :to="`/article/${post.id}`"
   >
     <div class="card-container">
-      <div class="card-header">
-        <div
-          :style="{ backgroundImage: `url('${post.img}')` }"
-          class="card-cover"
-        />
-      </div>
+      <div
+        :style="{ backgroundImage: `url('${post.img}')` }"
+        class="card-cover"
+      />
       <div class="card-body">
         <div class="card-title">
           <h1>
@@ -22,7 +20,6 @@
           <p> {{ post.text }} </p>
         </div>
       </div>
-
       <div class="card-footer">
         <ul>
           <li class="published-date">
