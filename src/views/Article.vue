@@ -5,17 +5,17 @@
       alt="PubLeak logo"
       src="../assets/logo.svg"
     >
-    <HelloWorld msg="Banana" />
+    <MainPage msg="Banana" />
   </div>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld.vue';
+import MainPage from '../components/MainPage.vue';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    MainPage,
   },
 };
 </script>
