@@ -32,6 +32,4 @@ export default new Vuex.Store({
         .then((article) => commit('setArticle', article));
     },
   },
-  modules: {
-  },
 });

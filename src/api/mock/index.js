@@ -13,6 +13,6 @@ export default {
   },
 
   fetchArticle(id) {
-    return fetch(articles[id], 1000); // wait 1s before returning posts
+    return fetch(articles[id], 1000); // wait 1s before returning article
   },
 };

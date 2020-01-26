@@ -7,6 +7,8 @@ const ENGLISH_TRANSLATIONS = {
   publeakHeader: {
     title: 'PubLeak',
     subtitle: 'For the latest public leaks',
+    home: 'Home',
+    about: 'About',
   },
 };
 

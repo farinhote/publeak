@@ -2,17 +2,19 @@
   <div id="nav">
     <div>
       <router-link to="/">
-        <span>Home</span>
+        <span>{{ $t("publeakHeader.home") }}</span>
       </router-link>|
       <router-link to="/about">
-        <span>About</span>
+        <span>{{ $t("publeakHeader.about") }}</span>
       </router-link>
     </div>
-    <img
-      id="logo"
-      alt="PubLeak logo"
-      src="../assets/logo.svg"
-    >
+    <router-link to="/">
+      <img
+        id="logo"
+        alt="PubLeak logo"
+        src="../assets/logo.svg"
+      >
+    </router-link>|
 
     <div>
       <h1>{{ $t("publeakHeader.title") }}</h1>
