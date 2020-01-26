@@ -11,10 +11,10 @@
         :key="post.title"
         class="article"
       >
-        <div
-          @click="openArticle(post)"
-        >
-          {{ post.title }}
+        <div>
+          <router-link :to="`/article/${post.id}`">
+            {{ post.title }}
+          </router-link>
           <p>{{ post.subtitle }}</p>
         </div>
       </li>
@@ -78,13 +78,6 @@ export default {
 
   created() {
     this.$store.dispatch('fetchPosts');
-  },
-
-  methods: {
-    openArticle(post) {
-      // eslint-disable-next-line no-alert
-      alert(post.id);
-    },
   },
 };
 </script>
