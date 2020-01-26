@@ -1,11 +1,11 @@
 <template>
-  <div class="hello">
+  <div class="header">
     <h1> {{ $t("mainPage.title") }} </h1>
     <p>
       {{ $t("mainPage.subtitle") }}
     </p>
-    <h3>List of dumb Things</h3>
-    <ul>
+    <h3> {{ $t("mainPage.listTitle") }} </h3>
+    <ul class="cards">
       <card
         v-for="post in posts"
         :key="post.id"
@@ -58,5 +58,11 @@ li {
 }
 a {
   color: #42b983;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
 }
 </style>

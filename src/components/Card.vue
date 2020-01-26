@@ -42,4 +42,10 @@ li {
 a {
   color: #42b983;
 }
+.card {
+  border: 2px solid #e7e7e7;
+  border-radius: 4px;
+  padding: .5rem;
+}
+
 </style>
