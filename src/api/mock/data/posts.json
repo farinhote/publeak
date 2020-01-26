@@ -2,25 +2,29 @@
   {
     "id": "cool-post",
     "title": "Cool Post",
-    "subtitle": "Sub example",
-    "publishedDate": "39 minutes ago"
+    "text": "Sub example",
+    "publishedDate": "39 minutes ago",
+    "img": "https://www.pngitem.com/pimgs/m/21-218792_cool-png-image-word-cool-png-transparent-png.png"
   },
   {
     "id": "better-post",
     "title": "Better Post",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aspernatur quibusdam mollitia autem possimus pariatur, excepturi repudiandae illo veritatis minus laborum quisquam cum itaque, nobis vel non voluptas maxime deserunt velit, molestias quia dignissimos? Earum reiciendis dolorem accusantium veritatis esse corporis odio dicta sint? Aperiam, voluptatem iusto quas tempore accusamus quia nihil praesentium adipisci consequuntur omnis impedit numquam ad eligendi esse eaque minima tenetur nisi atque voluptates expedita nemo facere? Accusantium qui distinctio sunt ab necessitatibus deleniti deserunt est earum.",
-    "publishedDate": "2 hours ago"
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aspernatur quibusdam mollitia autem possimus pariatur, excepturi repudiandae illo veritatis minus laborum quisquam cum itaque, nobis vel non voluptas maxime deserunt velit, molestias quia dignissimos? Earum reiciendis dolorem accusantium veritatis esse corporis odio dicta sint? Aperiam, voluptatem iusto quas tempore accusamus quia nihil praesentium adipisci consequuntur omnis impedit numquam ad eligendi esse eaque minima tenetur nisi atque voluptates expedita nemo facere? Accusantium qui distinctio sunt ab necessitatibus deleniti deserunt est earum.",
+    "publishedDate": "2 hours ago",
+    "img": "https://www.pngitem.com/pimgs/m/21-218792_cool-png-image-word-cool-png-transparent-png.png"
   },
   {
     "id": "mega-post",
     "title": "Mega Post",
-    "subtitle": "Sub example",
-    "publishedDate": "18 hours ago"
+    "text": "Sub example",
+    "publishedDate": "18 hours ago",
+    "img": "https://www.pngitem.com/pimgs/m/21-218792_cool-png-image-word-cool-png-transparent-png.png"
   },
   {
     "id": "bad-post",
     "title": "Bad Post",
-    "subtitle": "Sub example",
-    "publishedDate": "1 day ago"
+    "text": "Sub example",
+    "publishedDate": "1 day ago",
+    "img": "https://www.pngitem.com/pimgs/m/21-218792_cool-png-image-word-cool-png-transparent-png.png"
   }
 ]

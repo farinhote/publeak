@@ -1,7 +1,10 @@
 <template>
   <div class="card-container">
     <div class="card-header">
-      <div class="card-cover" />
+      <div
+        :style="{ backgroundImage: `url('${post.img}')` }"
+        class="card-cover"
+      />
     </div>
 
     <div class="card-body">
@@ -13,7 +16,7 @@
         </h1>
       </div>
       <div class="card-summary">
-        <p> {{ post.subtitle }} </p>
+        <p> {{ post.text }} </p>
       </div>
     </div>
 
@@ -38,6 +41,14 @@ export default {
       },
     },
   },
+
+  created() {
+    if (this.$props.post.text.length >= 360) {
+      this.$props.post.text = `${this.$props.post.text.substring(0, 360)}...`;
+    }
+    // eslint-disable-next-line no-debugger
+    debugger;
+  },
 };
 </script>
 
@@ -48,11 +59,6 @@ li {
 }
 a {
   color: #42b983;
-}
-.card {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .card-container {
@@ -74,7 +80,6 @@ a {
 }
 
 .card-cover {
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/17779/yosemite-3.jpg");
   background-size: cover;
   border-radius: 5px 5px 0 0;
   height:8rem;

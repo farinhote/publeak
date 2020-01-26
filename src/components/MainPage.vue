@@ -7,7 +7,6 @@
       <card
         v-for="post in posts"
         :key="post.id"
-        class="article"
         :post="post"
       />
     </ul>
