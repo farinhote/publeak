@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ $t("thing") }}</h1>
+    <h1> {{ $t("mainPage.title") }} </h1>
     <p>
-      For the latest public leaks
+      {{ $t("mainPage.subtitle") }}
     </p>
     <h3>List of dumb Things</h3>
     <ul>
