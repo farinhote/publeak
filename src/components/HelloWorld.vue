@@ -7,10 +7,12 @@
     <h3>List of dumb Things</h3>
     <ul>
       <li class="article" v-for="task in tasks" :key="task">
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener">
-          {{task.title}}
-        </a>
-        <p>{{task.subtitle}}</p>
+        <div>
+          <a href="https://router.vuejs.org" target="_blank" rel="noopener">
+            {{task.title}}
+          </a>
+          <p>{{task.subtitle}}</p>
+        </div>
       </li>
     </ul>
     <h3>Ecosystem</h3>
@@ -45,11 +47,7 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 10px;
-}
-.article {
-  display: block;
-  margin: 0 10px;
+  margin: 20px 10px;
 }
 a {
   color: #42b983;
