@@ -13,8 +13,6 @@ export default {
   },
 
   fetchArticle(id) {
-    // eslint-disable-next-line no-debugger
-    debugger;
     return fetch(articles[id], 1000); // wait 1s before returning posts
   },
 };

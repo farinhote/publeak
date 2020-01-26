@@ -23,7 +23,7 @@ export default {
   },
 
   created() {
-    this.$store.dispatch('fetchArticle');
+    this.$store.dispatch('fetchArticle', this.$route.params.id);
   },
 };
 </script>

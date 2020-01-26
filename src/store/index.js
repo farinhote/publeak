@@ -26,9 +26,9 @@ export default new Vuex.Store({
         .then((posts) => commit('setPosts', posts));
     },
 
-    fetchArticle({ commit }) {
+    fetchArticle({ commit }, id) {
       return client
-        .fetchArticle(this.$route.params.id)
+        .fetchArticle(id)
         .then((article) => commit('setArticle', article));
     },
   },

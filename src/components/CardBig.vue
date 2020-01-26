@@ -1,5 +1,8 @@
 <template>
-  <div class="card-container">
+  <div
+    v-if="post.id"
+    class="card-container"
+  >
     <div class="card-header">
       <div
         :style="{ backgroundImage: `url('${post.img}')` }"
