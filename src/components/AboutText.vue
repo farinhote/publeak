@@ -1,7 +1,14 @@
 <template>
   <div id="about-text">
     <h1>{{ $t("about.title") }}</h1>
-    <p>{{ $t("about.tech") }}</p>
+    <div class="text">
+      <p
+        v-for="line in this.$t('about.tech')"
+        :key="line"
+      >
+        {{ line }}
+      </p>
+    </div>
     <a
       href="https://github.com/farinhote/"
       target="_blank"
@@ -17,18 +24,21 @@ export default {
 
 <style scoped>
 #about-text {
-  padding: 5em 0;
   width: 100%;
 }
 
 h1 {
   line-height: 1.5em;
-  text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd,
-    0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
+  text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd, 0 0.0625em 0 #fb203b,
+    0 0.125em 0 #fefc4b;
 }
 
 p {
   margin: auto;
+  padding: 1rem;
+}
+
+.text {
   padding: 0 0 10em 0;
 }
 
@@ -60,25 +70,25 @@ a {
 
 a:before,
 a:after {
-  content: '';
-  padding: .9em .4em;
+  content: "";
+  padding: 0.9em 0.4em;
   position: absolute;
   left: 50%;
   width: 100%;
   top: 50%;
   display: block;
-  border: 6px solid #9B541E;
+  border: 6px solid #9b541e;
   transform: translateX(-50%) translateY(-50%) rotate(0deg);
   animation: 10s infinite alternate ease-in-out tipsy;
 }
 
 a:before {
-  border-color: #9B541E #9B541E rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-color: #9b541e #9b541e rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   z-index: -1;
 }
 
 a:after {
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #9B541E #9B541E;
-  box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #9b541e #9b541e;
+  box-shadow: 25px 25px 25px rgba(46, 46, 49, 0.8);
 }
 </style>
