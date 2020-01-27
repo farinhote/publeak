@@ -4,6 +4,7 @@
     <p>{{ $t("about.tech") }}</p>
     <a
       href="https://github.com/farinhote/"
+      target="_blank"
     >Farinhote</a>
   </div>
 </template>
