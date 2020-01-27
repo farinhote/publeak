@@ -9,10 +9,10 @@ const fetch = (mockData, time = 0) => new Promise((resolve) => {
 
 export default {
   fetchPosts() {
-    return fetch(posts, 1000); // wait 1s before returning posts
+    return fetch(posts, 250); // wait 1s before returning posts
   },
 
   fetchArticle(id) {
-    return fetch(articles[id], 1000); // wait 1s before returning article
+    return fetch(articles[id], 250); // wait 1s before returning article
   },
 };
