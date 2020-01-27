@@ -47,6 +47,11 @@ p {
     width: 50vw;
   }
 }
+@media only screen and (max-width: 767px) {
+  p {
+    width: 90vw;
+  }
+}
 
 @keyframes tipsy {
   0% {
