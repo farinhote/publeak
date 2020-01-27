@@ -1,27 +1,28 @@
 <template>
   <div class="news">
-    <publeak-header />
-
-    <h3> {{ $t("mainPage.listTitle") }} </h3>
-    <div class="cards">
+    <div
+      v-if="posts.length"
+      class="cards"
+    >
       <card
         v-for="post in posts"
         :key="post.id"
         :post="post"
       />
     </div>
+    <spinner v-else />
   </div>
 </template>
 
 <script>
 import Card from './Card.vue';
-import PubleakHeader from './PubleakHeader.vue';
+import Spinner from './Spinner.vue';
 
 export default {
-  name: 'MainPage',
+  name: 'ArticleList',
   components: {
     Card,
-    PubleakHeader,
+    Spinner,
   },
   props: {
     msg: {
@@ -43,15 +44,10 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-
 .cards {
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 1rem;
-  padding: 0;
 }
 
 @media only screen and (max-width: 767px) {

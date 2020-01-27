@@ -1,33 +1,41 @@
 <template>
-  <div
-    v-if="post.id"
-    class="card-container"
-  >
-    <img
-      :src="post.img"
-      class="card-cover"
+  <div>
+    <div
+      v-if="post.id"
+      class="card-container"
     >
-    <div class="card-body">
-      <h1 class="card-title">
-        {{ post.title }}
-      </h1>
-      <p class="card-text">
-        {{ post.text }}
-      </p>
+      <img
+        :src="post.img"
+        class="card-cover"
+      >
+      <div class="card-body">
+        <h1 class="card-title">
+          {{ post.title }}
+        </h1>
+        <p class="card-text">
+          {{ post.text }}
+        </p>
+      </div>
+      <div class="card-footer">
+        <ul>
+          <li class="published-date">
+            {{ post.publishedDate }}
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="card-footer">
-      <ul>
-        <li class="published-date">
-          {{ post.publishedDate }}
-        </li>
-      </ul>
-    </div>
+    <spinner v-else />
   </div>
 </template>
 
 <script>
+import Spinner from './Spinner.vue';
+
 export default {
   name: 'CardBig',
+  components: {
+    Spinner,
+  },
   props: {
     post: {
       type: Object,
@@ -50,7 +58,6 @@ a {
   box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
   font-weight: 100;
   width: 100%;
-  margin: 48px auto;
 }
 
 .card-container a {

@@ -1,16 +1,19 @@
 <template>
   <div class="home">
-    <main-page />
+    <publeak-header />
+    <article-list />
   </div>
 </template>
 
 <script>
-import MainPage from '../components/MainPage.vue';
+import ArticleList from '../components/ArticleList.vue';
+import PubleakHeader from '../components/PubleakHeader.vue';
 
 export default {
   name: 'Home',
   components: {
-    MainPage,
+    ArticleList,
+    PubleakHeader,
   },
 };
 </script>
