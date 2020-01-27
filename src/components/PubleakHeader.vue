@@ -1,24 +1,25 @@
 <template>
-  <div id="header">
-    <div>
+  <div class="header">
+    <div class="presentation">
+      <router-link to="/">
+        <img
+          id="logo"
+          alt="PubLeak logo"
+          src="../assets/logo.svg"
+        >
+      </router-link>
+      <div class="presentationText">
+        <h1>{{ $t("publeakHeader.title") }}</h1>
+        <p>{{ $t("publeakHeader.subtitle") }}</p>
+      </div>
+    </div>
+    <div class="nav">
       <router-link to="/">
         <span>{{ $t("publeakHeader.home") }}</span>
-      </router-link>|
+      </router-link>
       <router-link to="/about">
         <span>{{ $t("publeakHeader.about") }}</span>
       </router-link>
-    </div>
-    <router-link to="/">
-      <img
-        id="logo"
-        alt="PubLeak logo"
-        src="../assets/logo.svg"
-      >
-    </router-link>
-
-    <div>
-      <h1>{{ $t("publeakHeader.title") }}</h1>
-      <p>{{ $t("publeakHeader.subtitle") }}</p>
     </div>
   </div>
 </template>
@@ -30,34 +31,63 @@ export default {
 </script>
 
 <style scoped>
-#header {
-  padding: 30px;
+.header {
+  display: grid;
 }
 
-#header a {
+.presentation {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  font-size: 30px;
+}
+
+.nav a {
   font-weight: bold;
   color: #2c3e50;
 }
 
-#header a.router-link-exact-active {
+.header a.router-link-exact-active {
   color: #42b983;
 }
 
 @media only screen and (max-width: 767px) {
   #logo {
-    width: 25vw;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: calc(16px + 20vw);
+  }
+
+  .header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .nav a:nth-child(1) {
+    grid-column: 2;
+  }
+  .nav a:nth-child(2) {
+    grid-column: 3;
   }
 }
+
 @media only screen and (min-width: 768px) {
   #logo {
-    position: absolute;
-    top: 0px;
-    left: 25vw;
-    border-top: 2px solid #9B541E;
-    width: 10vw;
+    width: calc(160px + 0.1vw);
+  }
+
+  .header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav a:nth-child(1) {
+    grid-column: 3;
+  }
+  .nav a:nth-child(2) {
+    grid-column: 4;
   }
 }
 </style>
