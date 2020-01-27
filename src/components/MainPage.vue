@@ -3,13 +3,13 @@
     <publeak-header />
 
     <h3> {{ $t("mainPage.listTitle") }} </h3>
-    <ul class="cards">
+    <div class="cards">
       <card
         v-for="post in posts"
         :key="post.id"
         :post="post"
       />
-    </ul>
+    </div>
   </div>
 </template>
 
@@ -46,27 +46,23 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 20px 10px;
-}
+
 .cards {
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 1rem;
+  padding: 0;
 }
+
 @media only screen and (max-width: 767px) {
   .cards {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 }
 
