@@ -11,9 +11,7 @@
       <div class="card-body">
         <div class="card-title">
           <h1>
-            <a>
-              {{ post.title }}
-            </a>
+            {{ post.title }}
           </h1>
         </div>
         <div class="card-summary">
@@ -52,26 +50,21 @@ export default {
 </script>
 
 <style scoped>
-li {
-  display: inline-block;
-  margin: 20px 10px;
-}
-
 a {
   color: #42b983;
 }
 
 .card{
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .card-container {
   background: #fff;
-  border-radius: 5px;
+  border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
   font-weight: 100;
   width: 100%;
-  margin: 48px auto;
+  margin: 0.8rem auto;
 }
 
 .card-container a {
@@ -97,9 +90,10 @@ a {
   position: relative;
 }
 
-.card-title h1 a {
+.card-title h1 {
   color: #333;
   font-weight: 100;
+  line-height: 2.5rem;
 }
 
 .card-summary p {
@@ -131,4 +125,11 @@ a {
   border-radius: 3px;
   padding: 0 0.5rem;
 }
+
+@media only screen and (max-width: 767px) {
+  .card {
+    margin: 0 1rem;
+  }
+}
+
 </style>

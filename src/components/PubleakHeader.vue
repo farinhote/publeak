@@ -33,6 +33,7 @@ export default {
 <style scoped>
 .header {
   display: grid;
+  margin-bottom: 3rem;
 }
 
 .presentation {
