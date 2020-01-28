@@ -1,5 +1,5 @@
 <template>
-  <div id="about-text">
+  <div class="about-text">
     <h1>{{ $t("about.title") }}</h1>
     <div class="text">
       <p
@@ -23,8 +23,9 @@ export default {
 </script>
 
 <style scoped>
-#about-text {
+.about-text {
   width: 100%;
+  margin-bottom: 10rem;
 }
 
 h1 {
